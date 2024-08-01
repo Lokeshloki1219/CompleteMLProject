@@ -36,7 +36,6 @@ class DataTransformation:
                 "lunch",
                 "test_preparation_course",
             ]
-
             num_pipeline= Pipeline(
                 steps=[
                 ("imputer",SimpleImputer(strategy="median")),
@@ -44,7 +43,6 @@ class DataTransformation:
 
                 ]
             )
-
             cat_pipeline=Pipeline(
 
                 steps=[
@@ -54,7 +52,6 @@ class DataTransformation:
                 ]
 
             )
-
             logging.info(f"Categorical columns: {categorical_columns}")
             logging.info(f"Numerical columns: {numerical_columns}")
 
